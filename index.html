@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dona Velora — Author</title>
+<meta name="description" content="Dona Velora writes fiction, spiritual reflections, essays on life and growth, and thoughts on technology and AI.">
+<meta property="og:title" content="Dona Velora — Author">
+<meta property="og:description" content="Stories, reflections and essays by Dona Velora.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf6f0;
+    --ink: #2b2420;
+    --muted: #7a6d63;
+    --accent: #9c6b3f;
+    --line: #e6dccf;
+    --card: #fffdf9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1c1916;
+      --ink: #efe7dc;
+      --muted: #a89a8c;
+      --accent: #d4a373;
+      --line: #3a332c;
+      --card: #24201c;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 300;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+  nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 28px 0;
+  }
+  nav .mark { font-family: "Cormorant Garamond", serif; font-size: 22px; font-weight: 600; letter-spacing: .04em; }
+  nav ul { list-style: none; display: flex; gap: 24px; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
+  nav a:hover { color: var(--accent); }
+
+  header.hero { text-align: center; padding: 110px 0 120px; }
+  .hero .ornament { color: var(--accent); font-size: 22px; letter-spacing: .6em; margin-bottom: 28px; }
+  .hero h1 {
+    font-family: "Cormorant Garamond", serif; font-weight: 400;
+    font-size: clamp(52px, 10vw, 92px); line-height: 1.05; letter-spacing: .02em;
+  }
+  .hero p.tag {
+    font-family: "Cormorant Garamond", serif; font-style: italic;
+    font-size: clamp(20px, 3vw, 26px); color: var(--muted); margin-top: 22px;
+  }
+  .hero .cta {
+    display: inline-block; margin-top: 44px; padding: 14px 34px;
+    border: 1px solid var(--accent); color: var(--accent); text-decoration: none;
+    font-size: 13px; letter-spacing: .14em; text-transform: uppercase; transition: all .25s;
+  }
+  .hero .cta:hover { background: var(--accent); color: var(--bg); }
+
+  section { padding: 90px 0; border-top: 1px solid var(--line); }
+  h2 {
+    font-family: "Cormorant Garamond", serif; font-weight: 400;
+    font-size: 40px; margin-bottom: 28px; text-align: center;
+  }
+  .lead { max-width: 620px; margin: 0 auto; text-align: center; color: var(--ink); }
+  .lead + .lead { margin-top: 18px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 20px; margin-top: 44px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); padding: 32px 24px;
+    text-align: center; transition: transform .25s, border-color .25s;
+  }
+  .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+  .card .icon { font-size: 26px; color: var(--accent); margin-bottom: 14px; }
+  .card h3 { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 23px; margin-bottom: 10px; }
+  .card p { font-size: 15px; color: var(--muted); }
+
+  .soon { text-align: center; }
+  .soon .badge {
+    display: inline-block; font-size: 12px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 4px; margin-bottom: 22px;
+  }
+  .soon p { color: var(--muted); max-width: 540px; margin: 0 auto; }
+
+  blockquote {
+    font-family: "Cormorant Garamond", serif; font-style: italic;
+    font-size: clamp(24px, 4vw, 32px); text-align: center; max-width: 640px; margin: 0 auto; line-height: 1.4;
+  }
+
+  .contact { text-align: center; }
+  .contact a.mail {
+    font-family: "Cormorant Garamond", serif; font-size: 26px; color: var(--accent); text-decoration: none;
+  }
+  .contact a.mail:hover { text-decoration: underline; }
+  .socials { margin-top: 26px; display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; }
+  .socials a { color: var(--muted); text-decoration: none; font-size: 14px; letter-spacing: .06em; }
+  .socials a:hover { color: var(--accent); }
+
+  footer { text-align: center; padding: 50px 0 60px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
+
+  @media (max-width: 600px) {
+    nav ul { gap: 14px; }
+    nav a { font-size: 12px; }
+    header.hero { padding: 70px 0 80px; }
+    section { padding: 64px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <span class="mark">DV</span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="ornament">✦ ✦ ✦</div>
+    <h1>Dona Velora</h1>
+    <p class="tag">Stories, stillness, and the spaces in between.</p>
+    <a class="cta" href="#writing">Explore the writing</a>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p class="lead">Dona Velora was born on an island of tea hills and temple bells, and now writes from a city far from the sea.</p>
+    <p class="lead">Her work moves between invented worlds and inner ones, from novels and short stories to reflections on the Buddhist path, everyday growth, and what it means to be human in an age of machines.</p>
+  </section>
+
+  <section id="writing">
+    <h2>What I Write</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">❦</div>
+        <h3>Fiction</h3>
+        <p>Novels and short stories about memory, belonging, and quiet courage.</p>
+      </div>
+      <div class="card">
+        <div class="icon">☸</div>
+        <h3>The Path</h3>
+        <p>Reflections on Dhamma, mindfulness, and walking the Buddhist way in modern life.</p>
+      </div>
+      <div class="card">
+        <div class="icon">❋</div>
+        <h3>Life &amp; Growth</h3>
+        <p>Honest notes on change, starting over, and becoming.</p>
+      </div>
+      <div class="card">
+        <div class="icon">◈</div>
+        <h3>Tech &amp; AI</h3>
+        <p>Essays on technology, artificial intelligence, and the people who live with it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <blockquote>“Every story begins as a breath held, waiting to be let go.”</blockquote>
+  </section>
+
+  <section id="books" class="soon">
+    <span class="badge">Coming soon</span>
+    <h2>Books &amp; Blog</h2>
+    <p>The first stories and essays are on their way. Check back soon, or get in touch to hear when they arrive.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Say Hello</h2>
+    <a class="mail" href="mailto:donavelora.writes@gmail.com">donavelora.writes@gmail.com</a>
+    <div class="socials">
+      <!-- Replace each # with your profile link, or delete the ones you don't use -->
+      <a href="#">Instagram</a>
+      <a href="#">Substack</a>
+      <a href="#">Medium</a>
+      <a href="#">Goodreads</a>
+    </div>
+  </section>
+</div>
+
+<footer>
+  © 2026 Dona Velora · All rights reserved
+</footer>
+
+</body>
+</html>
